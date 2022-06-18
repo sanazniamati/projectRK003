@@ -1,37 +1,50 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Stage, Layer, Rect } from "react-konva";
+import { Stage, Layer, Rect, Text } from "react-konva";
 
 const App = () => {
   return (
-    <Stage width={window.innerWidth} height={window.innerHeight}>
+    <Stage width={340} height={300}>
       <Layer>
+        <Text
+          id={"simple-text"}
+          x={Stage.innerWidth / 2}
+          y={15}
+          text={"Simple Text"}
+          fontSize={30}
+          fontFamily="Calibri"
+          fill={"green"}
+          // offsetX={}
+        />
+        <Text
+          id={"complex-text"}
+          x={20}
+          y={60}
+          text={
+            "COMPLEX TEXT\n\nAll the world's a stage, and all the men and women merely players. They have their exits and their entrances."
+          }
+          fontSize={18}
+          fontFamily="Calibri"
+          fill={"#555"}
+          width={300}
+          padding={20}
+          align="center"
+        />
+
         <Rect
           x={20}
-          y={20}
-          width={100}
-          height={50}
-          fill="green"
-          stroke="black"
-          strokWidth={4}
-        />
-        <Rect
-          x={150}
-          y={40}
-          width={100}
-          height={50}
-          fill="red"
+          y={60}
+          stroke={"#555"}
+          stroke-width={5}
+          fill={"#ddd"}
+          width={300}
+          // height={(complex-text).height}
           shadowBlur={10}
-          stroke="black"
+          shadowColor={"black"}
+          shadowOffsetX={10}
+          shadowOffsetY={10}
+          shadowOpacity={0.2}
           cornerRadius={10}
-        />
-        <Rect
-          x={50}
-          y={120}
-          width={100}
-          height={100}
-          fill="blue"
-          cornerRadius={[0, 10, 20, 30]}
         />
       </Layer>
     </Stage>

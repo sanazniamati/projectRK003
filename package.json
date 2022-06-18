@@ -1,11 +1,11 @@
 {
-  "name": "projectrk002",
+  "name": "projectrk003",
   "version": "0.1.0",
   "private": true,
   "keywords": [
     "react-konva",
     "react",
-    "Rect"
+    "Rect","Text"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
